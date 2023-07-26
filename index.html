@@ -27,7 +27,6 @@
           colors: {
             clifford: '#da373d',
             'main-color': '#F85559',
-            'text-white': '#FFF',
             'text-black': '#121212',
             'text-dark': '#fff',
           }
@@ -60,40 +59,79 @@
     .image4 {
       background-image: url(./images/banner4.png);
     }
+
+    .main-color {
+      color: #F85559;
+    }
+
+    .main-bg-color {
+      background-color: #F85559;
+    }
+
+    .text-white {
+      color: #fff;
+    }
+
+    .text-black {
+      color: #fff;
+    }
+
+    .text-dark {
+      color: rgba(18, 18, 18, 0.60);
+      ;
+    }
   </style>
 
 </head>
 
 <body class="font-lato">
   <!-- Nab bar here -->
-  <header class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-12 py-5 my-10 rounded-lg ">
+  <header class=" mx-auto container ">
 
     <!-- nav bar -->
+    <nav class="main-bg-color lg:my-10 rounded-3xl">
 
-    <div class="navbar bg-red-500 rounded-full max-w-screen-xl mx-auto px-6 md:px-10 lg:px-12 py-5 my-10">
-      <div class="menus navbar-start items-center text-xl md:text-xl from-neutral-50">
-        <ul class="flex gap-5 text-white">
-          <li>Home</li>
-          <li> About Us</li>
-          <li>Shop</li>
-          <li>All Fruits</li>
-        </ul>
-      </div>
-
-      <div class="logo-section navbar-center items-center">
-        <div class="logo-img flex items-center">
-          <img src="./images/logo.png" alt="">
-          <h1 class="text-2xl "> Fruit Burst</h1>
+      <div class="navbar text-white py-3 px-3 xl:px-10">
+        <div class="navbar-start lg:w-1/2">
+          <div class="hidden md:flex">
+            <ul class="menu menu-horizontal text-md text-white ">
+              <li><a class="text-white" href="#">Home</a></li>
+              <li><a class="text-white" href="#">About Us</a></li>
+              <li><a class="text-white" href="#">Shop</a></li>
+              <li><a class="text-white" href="#">All Fruits</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="logo-text"></div>
-      </div>
-      <div class="search-bar navbar-end">
-        <div class="form-control">
-          <input class="p-2 rounded-full items-end input input-bordered w-24 md:w-auto" type="text"
-            placeholder="Search" />
+        <div class="navbar-center flex items-center text-2xl">
+            <img src="./images/logo.png" alt="">
+            <span class="text-2xl ">Fruit Burst</span>
+          </div>
+        <div class="navbar-end">
+          <div class="join hidden lg:flex">
+            <input class="input join-item rounded-full focus:outline-0 text-fruit-primary" placeholder="Search here" />
+            <button class="btn join-item bg-white rounded-r-full border-0">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- Dropdown Menu -->
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#121212" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </label>
+            <ul tabindex="0"
+              class="menu menu-sm dropdown-content right-1/2 mt-3 z-30 p-2 shadow bg-base-100 text-fruit-primary rounded-box w-52">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">All Fruits</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
 
     <!-- header banner start here -->
 
@@ -190,6 +228,7 @@
 
   <main class="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-12 py-5 my-10">
     <section>
+
       <div class="deal-container">
         <div class="deal-of flex justify-en">
           <div class="deal-text flex-1 ">
@@ -237,21 +276,65 @@
         <!-- fruits start here here -->
 
         <!-- fruits start end here -->
-        <div class="fruits-card">
+        <div class="fruits-cards">
 
           <!-- fruits 1 -->
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img src="./images/fruit6.png" />
             </figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
+              <h2 class="card-title">12.90$ - 18.45$</h2>
+              <div class="divider"></div>
+              <p class="">Apple</p>
+
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
               </div>
+
+              <!-- Open the modal using ID.showModal() method -->
+              <p class="main-color" onclick="my_modal_1.showModal()"> Details </p>
+              <dialog id="my_modal_1" class="modal">
+                <form method="dialog" class="modal-box">
+                  <figure class="px-2 py-2">
+                    <img src="./images/fruit6.png" />
+                  </figure>
+                  <h3 class="font-bold text-lg">Apple</h3>
+                  <p class="py-4">Professional employees are there for you to pick the most <br> amazing and fresh
+                    fruits</p>
+                  <div class="rating rating-lg rating-half">
+                    <input type="radio" name="rating-10" class="rating-hidden" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                    <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  </div>
+                  <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn items-center text-center">Close</button>
+                    <button class="btn">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
+
             </div>
-            
+
           </div>
         </div>
       </div>
